@@ -4,6 +4,7 @@ package com.book.dto.request;
 import javax.validation.constraints.NotBlank;
 
 import com.book.entity.Publisher;
+import com.book.enumclass.status.PublisherStatus;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

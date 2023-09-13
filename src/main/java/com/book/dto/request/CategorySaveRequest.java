@@ -1,6 +1,7 @@
 package com.book.dto.request;
 
 import com.book.entity.Category;
+import com.book.enumclass.status.CategoryStatus;
 
 import lombok.AccessLevel;
 import lombok.Builder;

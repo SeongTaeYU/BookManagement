@@ -7,10 +7,10 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.book.entity.Publisher;
 import com.book.entity.Rental;
+import com.book.enumclass.status.RentalStatus;
 
-public interface RentalRepository extends JpaRepository<Publisher, Long>{
+public interface RentalRepository extends JpaRepository<Rental, Long>{
 	
 	  @Query (
 		        "select r "
