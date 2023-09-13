@@ -14,6 +14,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+
+import com.book.dto.request.BookUpdateRequest;
+import com.book.enumclass.status.BookStatus;
+
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
