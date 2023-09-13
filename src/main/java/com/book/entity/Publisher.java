@@ -15,6 +15,8 @@ import lombok.NonNull;
 import lombok.ToString;
 import org.hibernate.annotations.Where;
 
+import com.book.enumclass.status.PublisherStatus;
+
 /**
  * @CreateBy: SeongTae
  * @Date: 2023/09/13
