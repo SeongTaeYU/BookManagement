@@ -12,6 +12,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+
+import com.book.enumclass.status.RentalStatus;
+
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -55,8 +58,8 @@ public class Rental extends BaseTimeEntity {
     private LocalDate expiredAt;
 
     @Builder
-    public Rental ( Long id, User user, Book book ) {
-        this.id = id;
+    public Rental ( Long rentalId, User user, Book book ) {
+        this.rentalId = rentalId;
         this.user = user;
         this.book = book;
         this.rentalStatus = RentalStatus.RENTAL;
