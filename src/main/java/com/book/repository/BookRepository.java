@@ -15,12 +15,13 @@ public interface BookRepository extends JpaRepository<Book, Long> {
                 + "join fetch b.category "
                 + "join fetch b.publisher "
                 + "join fetch b.bookLocation "
-                + "where b.id =:id")
+                + "where b.bookId =:bookId")
         Optional<Book> findByIdJoinFetch(Long bookId);
 
         List<Book> findByTitleContaining(String title);
 
-        List<Book> findAllByCategoryId(Long BookId);
+//        List<Book> findAllByCategoryId(Long categoryId);	//Spring Data JPA가 해당 메서드를 올바르게 해석하기 위한 변경
+        List<Book> findAllByCategory_CategoryId(Long categoryId);
 
         Optional<Book> findByBookCode(String bookCode);
     }

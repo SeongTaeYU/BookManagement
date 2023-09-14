@@ -26,6 +26,11 @@ import com.book.repository.PublisherRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @CreateBy: SeongTae
+ * @Date: 2023/09/14
+ */
+
 @Slf4j
 @RequiredArgsConstructor
 @Service
@@ -63,7 +68,8 @@ public class ApiBookService {
 	@Transactional(readOnly = true)
 	public List<BookStockCountResponse> findAllBooksStockCount(Long categoryId){
 		findCategoryById(categoryId);
-		List<Book> books = bookRepository.findAllByCategoryId(categoryId);
+//		List<Book> books = bookRepository.findAllByCategoryId(categoryId);	//Spring Data JPA가 해당 메서드를 올바르게 해석하기 위한 변경
+		List<Book> books = bookRepository.findAllByCategory_CategoryId(categoryId);
 		return Collections.unmodifiableList(BookStockCountResponse.listOf(books));
 	}//end findAllBooksStockCount
 	
@@ -74,8 +80,8 @@ public class ApiBookService {
 	}//end updateBookInfo
 	
 	@Transactional
-	public Integer stockCountUpdate(Long id, Integer stockCount) {
-		Book book = findBookById(id);
+	public Integer stockCountUpdate(Long bookId, Integer stockCount) {
+		Book book = findBookById(bookId);
 		return book.updateStockCount(stockCount);
 	}//end stockCountUpdate
 

@@ -43,6 +43,7 @@ public class Rental extends BaseTimeEntity {
     @ManyToOne
     private User user;
 
+    @JoinColumn(name = "book_id")
     @OneToOne (fetch = FetchType.LAZY)
     private Book book;
 

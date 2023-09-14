@@ -75,7 +75,7 @@ public class Book extends BaseTimeEntity {
 
     @NonNull
     @Column (nullable = false)
-    private LocalDate publicationAt;                     // 초판 발행일
+    private LocalDate publicationAt;      // 초판 발행일
 
 
     @JoinColumn (name = "publisher_id")

@@ -8,6 +8,6 @@ import com.book.entity.Category;
 
 public interface CategoryRepository extends JpaRepository<Category, Long>{
 	
-	Optional<Category> findByCategoryName ( String categoryName );
+	Optional<Category> findByCategoryName (String categoryName);
 	
 }

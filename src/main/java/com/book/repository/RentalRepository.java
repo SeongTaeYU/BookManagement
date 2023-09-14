@@ -20,8 +20,8 @@ public interface RentalRepository extends JpaRepository<Rental, Long>{
 
 		    List<Rental> findRentalByUserEmail ( String email );
 
-		    @Query ("select r from Rental r where r.id =:id and r.onRental = true")
-		    Optional<Rental> findById ( Long rentalId );
+		    @Query ("select r from Rental r where r.rentalId =:rentalId and r.onRental = true")
+		    Optional<Rental> findByrentalId ( Long rentalId );
 
 		    @Query ("select r from Rental r where r.rentalStatus =:rentalStatus ")
 		    List<Rental> findAllNonRentals ( RentalStatus rentalStatus );

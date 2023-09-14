@@ -9,6 +9,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+/**
+ * @CreateBy: SeongTae
+ * @Date: 2023/09/12
+ */
+
 @ToString
 @NoArgsConstructor (access = AccessLevel.PRIVATE)
 @Getter
