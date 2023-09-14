@@ -17,6 +17,8 @@ import javax.persistence.OneToOne;
 
 import com.book.dto.request.BookUpdateRequest;
 import com.book.enumclass.status.BookStatus;
+import com.book.exception.BookStockCountZeroException;
+import com.book.exception.NotExistBookStockException;
 
 import lombok.AccessLevel;
 import lombok.Builder;
